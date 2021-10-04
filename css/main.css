@@ -1,78 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  text-align: center;
-  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  font-weight: 200;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+p {
+  color: #fff;
 }
 
 header {
   background-image: url("../assets/negative-space-black-forest-dawn.jpg");
   background-size: cover;
-  /* background-repeat: no-repeat;
-  background-position: center; */
-  background-attachment: fixed;
-  height: 50vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 940px;
 }
-
-header nav {
+header .nav-wrapper {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+header ul {
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  height: 60px;
+  display: inline-block;
   display: flex;
   justify-content: flex-end;
+  list-style: none;
+  align-items: center;
 }
-
-nav li {
-  display: inline-block;
-}
-
-nav li a {
+header li a {
   color: #fff;
   padding: 14px 16px;
   text-decoration: none;
 }
+header li a:hover {
+  text-decoration: underline;
+}
 
-nav li a:hover {
-  text-decoration: none;
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 180px;
+  line-height: 55px;
+  position: relative;
+}
+#home .header-container {
+  position: absolute;
+}
+#home .button {
+  margin-top: 500px;
+}
+#home .button > .arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+button {
+  border-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+main,
+.name,
+.portrait,
+#about,
+.about-container,
+.section-container,
+footer {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main {
   background-color: #fff;
 }
 
-.about {
+h2 {
+  margin-top: 20px;
+}
+
+.h2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#about {
+  background-color: #fff;
+  border-radius: 5px;
+  margin-top: 35px;
+}
+#about p {
+  color: #000;
+}
+#about .section-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 10px;
-}
-
-article .Rakib,
-.Alexandra,
-.Lasse,
-.Sebastian {
-  display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
+}
+#about .employee-1,
+#about .employee-2,
+#about .employee-3,
+#about .employee-4 {
+  width: 50%;
+  margin-top: 20px;
+}
+#about .about-container {
+  background-color: #cfcfcf;
+  border-radius: 4px;
+  margin-top: 30px;
+  padding: 38px;
+  width: 60%;
+}
+#about .about-text {
+  margin: 0;
+}
+#about .name {
+  margin: 25px;
+}
+#about .portrait {
+  width: 100%;
+}
+#about .portrait img {
+  flex-direction: row;
+  margin: 0 auto;
+  width: 50%;
+  border-radius: 100%;
+  box-shadow: 0 0 2rem #888888;
 }
 
-/* .photos {
-  display: inline-block;
-  width: 20%;
-} */
-.photos img {
-  width: 20%;
-  border-radius: 100%;
+.fas fa-arrow-circle-down {
+  color: #fff;
+  background-color: #000;
+  font-size: 19px;
+}
+
+.fas fa-quote-right {
+  color: #000;
+  font-size: 26px;
+}
+
+.fab {
+  color: #fff;
+  background-color: #000;
+  font-size: 19px;
 }
 
 footer {
-  background-color: black;
+  padding: 20px;
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #000;
+}
+footer #contact {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-footer div {
-  margin: 50px;
-}
-footer p {
+footer .street-adress,
+footer .contact-information,
+footer .social-links li > a {
   color: #fff;
+  margin: 35px;
+  list-style: none;
+  text-decoration: none;
+  line-height: 30px;
+  outline: none;
+}
+
+@media screen and (min-width: 275px) and (max-width: 1040px) {
+  .nav-wrapper ul > li a {
+    display: block;
+  }
+
+  #home,
+#about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .section-container,
+.portrait img {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

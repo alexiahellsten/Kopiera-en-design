@@ -1,88 +1,240 @@
-@import "mixins";
 @import "variables";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  text-align: center;
-  color: $aboutText;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 12pt;
+  font-weight: 200;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 1.4rem;
+  color: $white;
+}
+
+p {
+  color: $white;
 }
 
 header {
   background-image: url("../assets/negative-space-black-forest-dawn.jpg");
   background-size: cover;
-  /* background-repeat: no-repeat;
-  background-position: center; */
-  background-attachment: fixed;
-  height: 50vh;
-}
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 940px;
 
-header nav {
-  display: flex;
-  justify-content: flex-end;
-}
+  .nav-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
 
-nav li {
-  display: inline-block;
-}
+  ul {
+    background-color: $white-glass;
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    align-items: center;
+  }
 
-nav li a {
-  color: $linkColor;
-  padding: 14px 16px;
-  text-decoration: none;
-}
+  li a {
+    color: $white;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
 
-nav li a:hover {
-  text-decoration: none;
+  li a:hover {
+    text-decoration: underline;
+  }
 }
 
 #home {
-}
-
-main {
-  background-color: #fff;
-}
-
-.about {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  flex-direction: column;
+  margin-top: 180px;
+  line-height: 55px;
+  position: relative;
+
+  .header-container {
+    position: absolute;
+  }
+
+  .button {
+    margin-top: 500px;
+  }
+
+  .button > .arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 
-article .Rakib,
-.Alexandra,
-.Lasse,
-.Sebastian {
+button {
+  border-style: none;
+  display: inline-block;
+  margin: 10px;
+}
+
+main,
+.name,
+.portrait,
+#about,
+.about-container,
+.section-container,
+footer {
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* .photos {
-  display: inline-block;
-  width: 20%;
-} */
+main {
+  background-color: $white;
+}
 
-.photos img {
-  width: 20%;
-  border-radius: 100%;
+h2 {
+  margin-top: 20px;
+}
+
+.h2 {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#about {
+  background-color: $white;
+  border-radius: 5px;
+  margin-top: 35px;
+
+  p {
+    color: $black;
+  }
+
+  .section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .employee-1,
+  .employee-2,
+  .employee-3,
+  .employee-4 {
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .about-container {
+    background-color: $lightgrey;
+    border-radius: 4px;
+    margin-top: 30px;
+    padding: 38px;
+    width: 60%;
+  }
+  .about-text {
+    margin: 0;
+  }
+
+  .name {
+    margin: 25px;
+  }
+
+  .portrait {
+    width: 100%;
+  }
+
+  .portrait img {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 50%;
+    border-radius: 100%;
+    box-shadow: 0 0 2rem ($darkgrey);
+  }
+}
+
+.fas fa-arrow-circle-down {
+  color: $white;
+  background-color: #000;
+  font-size: 19px;
+}
+
+.fas fa-quote-right {
+  color: $black;
+  font-size: 26px;
+}
+
+.fab {
+  color: $white;
+  background-color: $black;
+  font-size: 19px;
 }
 
 footer {
-  background-color: black;
+  padding: 20px;
+  width: 100%;
+  height: 400px;
+  margin-top: 50px;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $black;
 
-  div {
-    margin: 50px;
+  #contact {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
-  p {
-    color: #fff;
+  .street-adress,
+  .contact-information,
+  .social-links li > a {
+    color: $white;
+    margin: 35px;
+    list-style: none;
+    text-decoration: none;
+    line-height: 30px;
+    outline: none;
   }
-  button,
-  img {
+}
+
+@media screen and (min-width: 275px) and (max-width: 1040px) {
+  .nav-wrapper {
+    ul > li a {
+      display: block;
+    }
+  }
+
+  #home,
+  #about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .section-container,
+  .portrait img {
+    display: flex;
+    flex-direction: row;
   }
 }

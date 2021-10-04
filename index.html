@@ -4,18 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+    <title>Some random page</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script src="https://kit.fontawesome.com/9604976d4b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
+      <div class="nav-wrapper">
       <nav>
         <ul>
           <li><a href="#home">Hem</a></li>
@@ -23,68 +18,94 @@
           <li><a href="#contact">Kontakt</a></li>
         </ul>
       </nav>
+    </div>
       <section id="home">
+        <div class="header-container">
         <h1>Welcome to nature</h1>
         <p>A journey through time and sheep</p>
         <p>To see how ...cotton ... is mage, made I mean...</p>
-        <button class="arrow">
-        <a href="#about"><i class="fa-solid fa-circle-arrow-down"></i></a>
+        </div>
+        <div class="button">
+          <button>
+        <a href="#about"><i class="fas fa-arrow-circle-down"></i></a>
         </button>
+        </div>
       </section>
     </header>
     <main>
-  
-
       <section id="about">
-        <h2>Träffa laget</h2>
-        <article id="Rakib"><h4>Rakib</h4>
-        <div class="photos">
-          <img src="assets/profiles/Rakib_Square.png" alt="Rakib_Square" /></div>
-        <p>Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på nya tekniker</p>
-      </article>
-      <article id="Alexandra"><h4>Alexandra</h4>
-        <div class="photos">
-          <img src="assets/profiles/Alexandra_Square.png" alt="Alexandra" />
+       <div class="h2"><h2>Träffa laget</h2></div>
+       <div class="section-container">
+       
+        <section class="employee-1">
+          <div class="name"><h4>Rakib</h4>
+          </div>
+          <div class="portrait">
+          <img src="assets/profiles/Rakib_Square.png" alt="En porträttbild på Rakib" /></div>
+          <div class="about-container">
+          <div class="about-text">
+            <i class="fas fa-quote-right"></i><p>Rakib är vår vassaste node-utvecklare och håller ständigt ett öga på nya tekniker</p>
+          </div>
+          </div>
+        </section>
+      <section class="employee-2">
+       <div class="name"><h4>Alexandra</h4></div>
+        <div class="portrait">
+          <img src="assets/profiles/Alexandra_Square.png" alt="En porträttbild på Alexandra" />
         </div>
-        <p>Alexandra håller reda på alla överallt och ser till att det flyter</p>
-       </article>
-       <article id="Lasse">
-        <h4>Lasse</h4>
-        <div class="photos">
-          <img src="assets/profiles/NoPerson_Square.png" alt="Bild" />
+        <div class="about-container">
+        <div class="about-text">
+          <i class="fas fa-quote-right"></i><p>Alexandra håller reda på alla överallt och ser till att det flyter</p>
         </div>
-        <p>Gör övriga saker... mestadels ...</p>
-      </article>
-      <article id="Sebastian">
-        <h4>Sebastian</h4>
-        <div class="photos">
-          <img src="assets/profiles/Sebastian_Square.png" alt="Sebastian" />
+      </div>
+       </section>
+       <section class="employee-3">
+        <div class="name"><h4>Lasse</h4></div>
+        <div class="portrait">
+          <img src="assets/profiles/NoPerson_Square.png" alt="En tom bild" />
         </div>
-        <p>En av våra utbildare som har stor erfarenhet av ganska många saker</p>
-        </article>
-        <button class="arrow-last">
-          <a href="#contact"><i class="fa-solid fa-circle-arrow-down"></i>
-          </a></button>
+        <div class="about-container">
+        <div class="about-text">
+          <link class="fas fa-quote-right"></i><p>Gör övriga saker... mestadels ...</p>
+        </div>
+        </div>
       </section>
-    </main>
-  </body>
-  <footer id="contact">
-    <div>
-      <p>Tegel Consulting AB</p>
-      <p>Agatvägen 18</p>
-      <p>168 60 Bromma</p>
-    </div>
-    <div>
-      <p>info at tegelconsulting.se</p>
-      <p>070-123 456 78</p>
-    </div>
-    <div>
-      <button id="instagram"><a href="http://instagram.com"><i class="fab fa-instagram"></i></button></a>
-      <p>Instagram</p>
-      <button id="twitter"><a href="http://twitter.com"><i class="fab fa-twitter"></i></button></a>
-      <p>Twitter</p>
-      <button id="facebook"><a href="http://facebook.com"><i class="fab fa-facebook-f"></i></button></a>
-      <p>Facebook</p>
-    </div>
+      <section class="employee-4">
+        <div class="name"><h4>Sebastian</h4></div>
+        <div class="portrait">
+          <img src="assets/profiles/Sebastian_Square.png" alt="En porträttbild på Sebastian" />
+        </div>
+        <div class="about-container">
+        <div class="about-text">
+          <i class="fas fa-quote-right"></i><p>En av våra utbildare som har stor erfarenhet av ganska många saker</p>
+        </div>
+        </div>
+      </div>
+      <div class="button">
+        <button>
+      <a href="#about"><i class="fas fa-arrow-circle-down"></i></a>
+      </button>
+      </div>
+      </section>
+      </section>
+  <footer>
+    <section id="contact">
+    <ul class="street-adress">
+      <li>Tegel Consulting AB</li>
+      <li>Agatvägen 18</li>
+      <li>168 60 Bromma</li>
+  </ul>
+    <ul class="contact-information">
+      <li>info at tegelconsulting.se</li>
+      <li>070-123 456 78</li>
+      </ul>
+
+    <ul class="social-links">
+      <li><button><a href="http://instagram.com"><i class="fab fa-instagram"></i></button>Instagram</a></li>
+    <li><button><a href="http://twitter.com"><i class="fab fa-twitter"></i></button>Twitter</a></li>
+      <li><button><a href="http://facebook.com"><i class="fab fa-facebook-f"></i></button>Facebook</a></li>
+      </ul>
+    </section>
   </footer>
+</body>
 </html>
