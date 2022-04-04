@@ -1,5 +1,6 @@
 # Kopiera-en-design
 
-1. Run live server
-
-2. Type in "npm run build" in the terminal
+How to run:
+1. Type in npm i to install dependencies
+2. Run live server
+3. Type in "npm run build" in the terminal
