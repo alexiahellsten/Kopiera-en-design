@@ -1,8 +1,9 @@
 @import "variables";
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -10,231 +11,393 @@ body {
   font-size: 12pt;
   font-weight: 200;
   line-height: 1.1;
-}
-
-h1 {
-  font-size: 1.4rem;
-  color: $white;
-}
-
-p {
-  color: $white;
+  text-decoration: none;
 }
 
 header {
-  background-image: url("../assets/negative-space-black-forest-dawn.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 940px;
+  position: relative;
+  width: 100%;
 
-  .nav-wrapper {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-  }
+#navbar {
+  background-color: $white-glass;
+  padding: 25px;
+}
 
-  ul {
-    background-color: $white-glass;
-    width: 100%;
-    height: 60px;
-    display: inline-block;
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-    align-items: center;
+.nav-wrapper{
+  font-size: 1.2rem;
+}
+
+.hamburger {
+  height: 15px;
+  margin: 2.5px;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  justify-items: right;
+}
+
+.hamburger div {
+  background-color: $white;
+  position: relative;
+  width: 30px;
+  height: 3.25px;
+  margin-top: 5.25px;
+  transition: all 0.2s ease-in-out;
+  border-radius: 5px;
+}
+
+#toggler {
+  display: none;
+}
+
+#toggler:checked ~ .nav-links {
+  height: 10vh;
+  display: block;
+}
+
+#toggler:checked + .hamburger .top {
+  transform: rotate(-45deg);
+  margin-top: 11.25px;
+}
+
+#toggler:checked + .hamburger .middle {
+  transform: rotate(45deg);
+  margin-top: -2.5px;
+}
+
+#toggler:checked + .hamburger .bottom {
+  transform: scale(0);
+}
+
+.nav-links {
+  height: 0px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  list-style-type: none;
+  text-align: center;
+  overflow: hidden;
+  transition: height .4s ease;
+  transition: all 0.3s ease;
+}
+
+  nav ul li {
+    line-height: 1.2;
   }
 
   li a {
     color: $white;
-    padding: 14px 16px;
     text-decoration: none;
   }
 
   li a:hover {
     text-decoration: underline;
   }
+
 }
 
-#home {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  margin-top: 180px;
-  line-height: 55px;
-  position: relative;
+.header-image {
+  background-image: url(../assets/negative-space-black-forest-dawn.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
 
-  .header-container {
-    position: absolute;
+    .header-text {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        height: 35vh;
+        width: 100%;
+
+        .text-box {
+          margin-top: 35vh;
+          height: 30vh;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        h1,
+        p {
+            text-align: center;
+            width: 65%;
+            color: $white;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            line-height: 1;
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+    }
   }
 
-  .button {
-    margin-top: 500px;
-  }
-
-  .button > .arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-}
-
-button {
-  border-style: none;
-  display: inline-block;
-  margin: 10px;
-}
-
-main,
-.name,
-.portrait,
-#about,
-.about-container,
-.section-container,
-footer {
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-main {
-  background-color: $white;
-}
-
-h2 {
-  margin-top: 20px;
-}
-
-.h2 {
-  display: flex;
-  justify-content: space-around;
-  flex-direction: row;
-}
-
-#about {
-  background-color: $white;
-  border-radius: 5px;
-  margin-top: 35px;
-
-  p {
-    color: $black;
-  }
-
-  .section-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .employee-1,
-  .employee-2,
-  .employee-3,
-  .employee-4 {
-    width: 50%;
+  main {
+    text-align: center;
     margin-top: 20px;
-  }
 
-  .about-container {
-    background-color: $lightgrey;
-    border-radius: 4px;
-    margin-top: 30px;
-    padding: 38px;
-    width: 60%;
-  }
-  .about-text {
-    margin: 0;
-  }
+    #about h1 {
+      margin: 40px;
+    }
 
-  .name {
-    margin: 25px;
-  }
+    .employees {
+      width: 100%;
+    }
 
-  .portrait {
-    width: 100%;
-  }
+    .employee-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
 
-  .portrait img {
-    flex-direction: row;
-    margin: 0 auto;
-    width: 50%;
-    border-radius: 100%;
-    box-shadow: 0 0 2rem ($darkgrey);
-  }
-}
+    .employee-container h4 {
+      margin: 10px;
+    }
 
-.fas fa-arrow-circle-down {
-  color: $white;
-  background-color: #000;
-  font-size: 19px;
-}
+    .portrait {
+        width: 250px;
+        margin-top: 10px;
+    }
 
-.fas fa-quote-right {
-  color: $black;
-  font-size: 26px;
-}
+    .portrait img {
+        border-radius: 50%;
+        max-width: 100%;
+        box-shadow: 0 0 2rem ($darkgrey);
+    }
 
-.fab {
-  color: $white;
-  background-color: $black;
-  font-size: 19px;
+    .about-container {
+        width: 80%;
+        height: 125px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray;
+        border-radius: 5px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+
+        p {
+            width: 80%;
+            padding: 5px;
+            line-height: 1.2;
+        }
+    }
 }
 
 footer {
-  padding: 20px;
-  width: 100%;
+  background-color: $black;
   height: 400px;
   margin-top: 50px;
+  margin-top: 20px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  flex-direction: column;
   align-items: center;
-  background-color: $black;
+  justify-content: center;
+  flex-wrap: wrap;
 
-  #contact {
-    width: 100%;
-    margin: 0 auto;
+  .footer-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .street-adress,
   .contact-information,
   .social-links li > a {
     color: $white;
-    margin: 35px;
-    list-style: none;
+    list-style-type: none;
     text-decoration: none;
     line-height: 30px;
-    outline: none;
+    margin: 15px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+li {
+  color: $white;
+  font-size: 1.3rem;
   }
 }
 
-@media screen and (min-width: 275px) and (max-width: 1040px) {
-  .nav-wrapper {
-    ul > li a {
-      display: block;
-    }
-  }
+.bi-instagram,
+.bi-facebook,
+.bi-twitter {
+  margin: 10px;
+}
 
-  #home,
-  #about {
+button {
+  border: none;
+  background-color: transparent;
+}
+
+.white-arrow::before {
+  font-size: 1.2rem;
+  color: $white;
+  border-style: none;
+  background-color: transparent;
+}
+
+.black-arrow::before {
+  font-size: 1.2rem;
+  color: $black;
+  background-color: transparent;
+}
+
+
+@media screen and (min-width: 800px) {
+
+header {
+  position: relative;
+  width: 100%;
+
+  .header-text {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    width: 100%;
   }
 
-  .section-container,
-  .portrait img {
+  .header-button {
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
+
+.white-arrow::before {
+  font-size: 1.2rem;
+  color: $white;
+  border-style: none;
+  background-color: transparent;
+}
+
+.black-arrow::before {
+  font-size: 1.2rem;
+  color: $black;
+  background-color: transparent;
+}
+
+#navbar {
+  background-color: $white-glass;
+  padding: 0;
+}
+
+.nav-wrapper {
+  font-size: 1rem;
+}
+
+.nav-links {
+  height: 10vh;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+  
+  .hamburger div {
+    display: none;
+  }
+  
+  #toggler {
+    display: none;
+  }
+
+  nav li {
+    line-height: 1.2;
+    display: inline;
+    padding: 10px;
+  }
+
+  li a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  li a:hover {
+    text-decoration: underline;
+  }
+
+}
+
+  main {
+
+        section {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        flex-direction: row;
+
+        .employee-container {
+            width: 50%;
+        }
+
+        .employee-container:nth-child(3) .about-container {
+            width: 225px;
+            height: 100px;
+        }
+
+        .about-container {
+          min-width: 90%;
+          height: 125px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: lightgray;
+          border-radius: 5px;
+          margin-top: 15px;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+footer {
+  background-color: $black;
+  width: 100%;
+  height: 240px;
+
+  #contact {
+    width: 90%;
+  }
+
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .street-adress,
+  .contact-information,
+  .social-links li > a {
+    color: $white;
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 30px;
+    margin: 15px;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+li {
+  color: $white;
+  font-size: 1.3rem;
+  }
+}
+
 }

@@ -1,0 +1,23 @@
+{
+  "name": "kopiera-en-design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "sass scss/main.scss:css/main.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexiahellsten/Kopiera-en-design.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexiahellsten/Kopiera-en-design/issues"
+  },
+  "homepage": "https://github.com/alexiahellsten/Kopiera-en-design#readme",
+  "devDependencies": {
+    "sass": "^1.49.11"
+  }
+}
